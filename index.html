@@ -1,0 +1,1192 @@
+﻿<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKANWO Dieudonné · Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Forum&family=Abel&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (gratuit) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ast-global-color-0: #DCA54A;
+      --ast-global-color-1: #D09A40;
+      --ast-global-color-2: #0F172A;
+      --ast-global-color-3: #4A4A4A;
+      --ast-global-color-4: #FAF5E5;
+      --ast-global-color-5: #FFFFFF;
+      --ast-global-color-6: #F0E6C5;
+      --ast-global-color-7: #141004;
+      --e-global-color-secondary: #536941;
+      --e-global-color-text: #DAB200;
+      --e-global-color-accent: #9FCE00;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ast-global-color-3);
+      background-color: var(--ast-global-color-5);
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      color: var(--ast-global-color-2);
+    }
+
+    h1 { font-size: 64px; line-height: 1.4; }
+    h2 { font-size: 30px; line-height: 1.3; color: var(--e-global-color-secondary); }
+    h3 { font-size: 20px; line-height: 1.3; }
+    h4 { font-size: 35px; font-family: 'Forum', cursive; }
+    h5 { font-size: 18px; }
+    h6 { font-size: 15px; }
+
+    a {
+      text-decoration: none;
+      color: var(--e-global-color-text);
+      transition: 0.2s;
+    }
+    a:hover {
+      color: var(--e-global-color-accent);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER */
+    .main-header {
+      background-color: var(--ast-global-color-5);
+      border-bottom: 1px solid #eaeaea;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .logo img {
+      max-width: 60px;
+      height: auto;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+    .main-nav a {
+      font-weight: 500;
+      color: var(--ast-global-color-2);
+    }
+    .main-nav a:hover, .main-nav a.active {
+      color: var(--ast-global-color-1);
+    }
+    .btn-phone {
+      display: inline-block;
+      padding: 12px 25px;
+      border: 1px solid var(--ast-global-color-2);
+      border-radius: 4px;
+      font-size: 0.9375rem;
+      color: var(--ast-global-color-2);
+      background: transparent;
+      transition: 0.2s;
+    }
+    .btn-phone:hover {
+      border-color: var(--ast-global-color-1);
+      color: var(--ast-global-color-1);
+    }
+
+    /* SECTIONS GÉNÉRALES */
+    section {
+      padding: 80px 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      letter-spacing: -2px;
+      color: #1A2CD0;
+      margin-bottom: 10px;
+    }
+    .divider-gold {
+      width: 8%;
+      height: 3px;
+      background: var(--ast-global-color-0);
+      margin: 0 auto 50px;
+    }
+    .bg-light {
+      background-color: #f9f9f9;
+    }
+
+    /* ACCUEIL (HERO) */
+    .hero {
+      background-image: url('https://ddstart.unaux.com/wp-content/uploads/2026/03/p7.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      min-height: 655px;
+      display: flex;
+      align-items: center;
+      padding: 80px 20px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    .hero-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .hero-text {
+      flex: 1.2;
+    }
+    .hero-image {
+      flex: 0.8;
+      text-align: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+      border: 3px solid rgba(255,255,255,0.2);
+    }
+    .hero-subtitle {
+      font-size: 28px;
+      letter-spacing: -3px;
+      color: #E2E5D2;
+      margin-bottom: 16px;
+    }
+    .hero-name {
+      font-size: 48px;
+      font-weight: 800;
+      color: #ECECEC;
+      margin-bottom: 20px;
+    }
+    .hero-desc {
+      font-family: 'Abel', sans-serif;
+      font-size: 22px;
+      letter-spacing: 2.3px;
+      color: #E1E5EC;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    .extra-titles p {
+      font-family: 'Tahoma', sans-serif;
+      font-size: 28px;
+      letter-spacing: -1.2px;
+      color: #EFEFEF;
+      margin-bottom: 5px;
+    }
+
+    /* SERVICES (compétences) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin: 20px 20px 10px;
+      color: #CC1717;
+    }
+    .service-card p {
+      margin: 0 20px 25px;
+      color: #4a4a4a;
+    }
+
+    /* À PROPOS */
+    .about-hero {
+      background-image: url('https://ddstart.unaux.com/wp-content/uploads/2026/03/p1.jpg');
+      background-size: cover;
+      background-position: bottom center;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(20,16,4,0.3);
+    }
+    .about-hero h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 76px;
+      letter-spacing: -3px;
+      color: #FFFFFF;
+    }
+    .about-content {
+      max-width: 900px;
+      margin: 60px auto;
+      text-align: center;
+    }
+    .about-content h4 {
+      font-size: 36px;
+      letter-spacing: -2px;
+      margin-bottom: 30px;
+    }
+    .about-content img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+    .quote-block {
+      background-color: var(--ast-global-color-4);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .quote-block img.quote-icon {
+      width: 37px;
+      opacity: 0.3;
+      margin-bottom: 20px;
+    }
+    .quote-block h4 {
+      font-size: 35px;
+      letter-spacing: -2px;
+      color: #3C3232;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+    .quote-author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .quote-author img {
+      width: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .quote-author p {
+      font-size: 14px;
+      color: #4A4A4A;
+    }
+
+    /* CONTACT */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 500px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+    .contact-item h6 {
+      font-size: 14px;
+      letter-spacing: 0px;
+      color: var(--ast-global-color-6);
+      margin-bottom: 5px;
+    }
+    .contact-item p {
+      font-size: 18px;
+      color: var(--ast-global-color-2);
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      background-color: #536941;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+    }
+    .social-icons a:hover {
+      background-color: var(--ast-global-color-2);
+      color: white;
+    }
+    .team-section {
+      background-color: var(--ast-global-color-4);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .team-section h4 {
+      font-size: 40px;
+      letter-spacing: -2px;
+      color: #361515;
+      margin-bottom: 40px;
+    }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .team-grid img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* FORMULAIRE */
+    .form-container {
+      max-width: 700px;
+      margin: 50px auto 0;
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: white;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      transition: 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-bottom-color: var(--ast-global-color-0);
+    }
+    .btn-submit {
+      background: var(--ast-global-color-0);
+      color: var(--ast-global-color-2);
+      border: none;
+      padding: 15px 34px;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-submit:hover {
+      background: var(--ast-global-color-1);
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: var(--ast-global-color-5);
+      padding: 30px 20px;
+      border-top: 1px solid #eee;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer-nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      color: var(--ast-global-color-2);
+    }
+    .footer-nav a:hover {
+      color: var(--ast-global-color-1);
+    }
+    .footer-logo img {
+      width: 60px;
+    }
+    .footer-copyright {
+      text-align: right;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        text-align: center;
+      }
+      .hero-image {
+        order: -1;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .footer-copyright {
+        text-align: center;
+      }
+      .header-inner {
+        flex-direction: column;
+      }
+      .section-title {
+        font-size: 32px;
+      }
+      .divider-gold {
+        width: 20%;
+      }
+      .about-hero h1 {
+        font-size: 54px;
+      }
+      .team-grid img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/cropped-Logo-e1741703551944-1.png" alt="Logo AKANWO">
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#accueil" class="active">Accueil</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#competences">Mes compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+2290162750298" class="btn-phone">+229 0162750298</a>
+  </div>
+</header>
+
+<!-- SECTION ACCUEIL -->
+<section id="accueil" class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-subtitle">Etudiant en ( SIL ) Système Informatique et Logiciel</div>
+      <div class="hero-name">AKANWO Dieudonné</div>
+      <div class="hero-desc">
+        Je suis un passionné des IA<br>
+        Et des technologies de programmation des applications PC et mobile<br>
+        et très doué en conception de base de donnée excell.
+      </div>
+      <div class="extra-titles">
+        <p>Ajoutez votre titre ici</p>
+        <p>Découvrez moi en visitant le site</p>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/ChatGPT-Image-10-mars-2026-11_48_19.png" alt="AKANWO Dieudonné">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION À PROPOS -->
+<section id="a-propos">
+  <div class="about-hero">
+    <h1>A propos de moi</h1>
+  </div>
+  <div class="container about-content">
+    <h4>Grâce à ma détermination et à mon engagement, mes équipes qui me soutiennent dans de grands projets me font réussir à satisfaire les clients.</h4>
+    <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/s1.jpg" alt="Image à propos">
+  </div>
+  <div class="quote-block">
+    <img class="quote-icon" src="https://ddstart.unaux.com/wp-content/uploads/2021/11/quotes.svg" alt="quote">
+    <h4>“Le sport est ma passion seconde en plus de l'informatique. Il permet la mise en forme physique, psychologique et diminue le stress”</h4>
+    <div class="quote-author">
+      <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/ChatGPT-Image-10-mars-2026-11_48_19.png" alt="Dieudonné AKANWO">
+      <p>Dieudonné AKANWO</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION MES COMPÉTENCES (services) -->
+<section id="competences" class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Mes services</h2>
+    <div class="divider-gold"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/excel1.jpg" alt="Excel VBA">
+        <h3>Excel VBA (Macro et BDD)</h3>
+        <p>Le vba excel permet de créer des applications travaillant sur excel pour des analyses et gestions automatique des finances et autres tâches de gestion.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/ex2.jpg" alt="Dev apps">
+        <h3>Programmation d'application Pc et Mobile</h3>
+        <p>Je suis disposé à vous donner des résultats adéquat à vos besoins en application personnalisé pour les tâches que vous souhaitez accomplir à l'aide du numérique.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/ex3.jpg" alt="Affiches">
+        <h3>Réalisation d'affiches et autres services de saisie et d'impression</h3>
+        <p>Vos affiches pour différents événements sont présents ici.</p>
+      </div>
+    </div>
+    <!-- Section supplémentaire : pourquoi l'informatique -->
+    <div style="margin-top: 80px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+        <div style="flex:1;">
+          <img src="https://ddstart.unaux.com/wp-content/uploads/2026/03/ex4.jpg" alt="Logique et architecture" style="width:100%; border-radius:8px;">
+        </div>
+        <div style="flex:1;">
+          <h4 style="font-size:40px; letter-spacing:-2px; color:#1B43C7;">Qu'est ce qui est important en Informatique?</h4>
+          <p style="font-size:1rem; line-height:1.6; margin-bottom:30px;">La logique : C'est le moteur. C'est la capacité à transformer une idée complexe en une suite d'instructions fluides. C'est ce qui rend un programme "intelligent".<br><br>
+          L'architecture : C'est la structure. Un bon code n'est pas juste fonctionnel, il est construit pour durer, être évolutif et solide, exactement comme un bâtiment.</p>
+          <a href="#" class="btn-outline" style="display:inline-block; border:1px solid #0F172A; padding:16px 36px; border-radius:4px; color:#0F172A;">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contactez-moi</h2>
+    <div class="divider-gold"></div>
+    <div class="contact-info">
+      <div class="contact-item">
+        <h6>EMAIL</h6>
+        <p>diakan07@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <h6>PHONE NUMBER</h6>
+        <p>+229 0162750298<br>+229 0140046665</p>
+      </div>
+      <div class="contact-item">
+        <h6>LOCATION</h6>
+        <p>Porto-Novo</p>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="form-container">
+      <form action="#" method="post">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION ÉQUIPE (optionnelle, issue de la page contact) -->
+<div class="team-section">
+  <div class="container">
+    <h4>Je suis optimiste et m'associe avec une équipe qualifiée</h4>
+    <div class="team-grid">
+      <img src="https://ddstart.unaux.com/wp-content/uploads/2021/11/avatar_1.jpg" alt="team">
+      <img src="https://ddstart.unaux.com/wp-content/uploads/2021/11/avatar_2.jpg" alt="team">
+      <img src="https://ddstart.unaux.com/wp-content/uploads/2021/11/avatar_3.jpg" alt="team">
+      <img src="https://ddstart.unaux.com/wp-content/uploads/2021/11/avatar_4.jpg" alt="team">
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-nav">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#competences">Mes compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-logo">
+      <img src="https://websitedemos.net/love-nature-02/wp-content/uploads/sites/988/2021/11/logo-green.svg" alt="Logo">
+    </div>
+    <div class="footer-copyright">
+      <p>Love Nature by Tyler Moore</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ADMIN – Exportation HTML fiable (images et modifications préservées) -->
+<style>
+  #admin-toolbar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: #1e293b;
+    border-radius: 48px;
+    padding: 6px 12px;
+    display: flex;
+    gap: 8px;
+    font-family: system-ui, sans-serif;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
+  }
+  #admin-toolbar button {
+    background: #facc15;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  #admin-toolbar button.active { background: #ef4444; color: white; }
+  #admin-add-panel, .admin-style-panel {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: white;
+    border-radius: 16px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 9999;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
+    min-width: 160px;
+  }
+  .admin-style-panel input, .admin-style-panel select {
+    width: 100%;
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+  }
+  .admin-drag-handle {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: grab;
+    opacity: 0;
+    transition: 0.1s;
+    z-index: 10002;
+  }
+  .admin-mode [data-admin] { position: relative; }
+  .admin-mode [data-admin]:hover .admin-drag-handle { opacity: 1; }
+  .admin-mode [data-admin] { outline: 1px dashed #facc15; }
+  .admin-msg {
+    position: fixed;
+    bottom: 90px;
+    right: 200px;
+    background: #1e293b;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 40px;
+    font-size: 11px;
+    z-index: 10020;
+    white-space: nowrap;
+  }
+</style>
+
+<script>
+(function(){
+  const ADMIN_PASS = "admin123";
+  let adminMode = false;
+  let styleMode = false;
+  let currentStyle = { fontFamily: '', fontSize: '', color: '' };
+  let dragSrc = null;
+
+  // ========== SAUVEGARDE / RESTAURATION LOCAL ==========
+  function getKey(el) {
+    if (el.id) return el.id;
+    let p = [];
+    let n = el;
+    while (n && n !== document.body) {
+      let idx = 0;
+      let s = n;
+      while ((s = s.previousElementSibling)) if (s.tagName === n.tagName) idx++;
+      p.unshift(n.tagName.toLowerCase() + (idx ? `[${idx}]` : ''));
+      n = n.parentNode;
+    }
+    return p.join('>');
+  }
+
+  function save(el) {
+    let key = getKey(el);
+    if (el.innerText !== undefined && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' && el.tagName !== 'SELECT')
+      localStorage.setItem(`t_${key}`, el.innerText);
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      if (el.placeholder) localStorage.setItem(`ph_${key}`, el.placeholder);
+      if (el.value) localStorage.setItem(`v_${key}`, el.value);
+    }
+    if (el.tagName === 'SELECT') {
+      let opts = Array.from(el.options).map(o => ({ v: o.value, t: o.textContent, s: o.selected }));
+      localStorage.setItem(`opt_${key}`, JSON.stringify(opts));
+    }
+    if (el.tagName === 'IMG') {
+      localStorage.setItem(`img_${key}`, el.src);
+      if (el.alt) localStorage.setItem(`alt_${key}`, el.alt);
+    }
+    if (el.tagName === 'AUDIO') localStorage.setItem(`aud_${key}`, el.src);
+    if (el.tagName === 'VIDEO') localStorage.setItem(`vid_${key}`, el.src);
+    if (el.style.cssText) localStorage.setItem(`st_${key}`, el.style.cssText);
+    else localStorage.removeItem(`st_${key}`);
+  }
+
+  function restore() {
+    document.querySelectorAll('body *:not(#admin-toolbar):not(#admin-add-panel):not(.admin-style-panel)').forEach(el => {
+      let key = getKey(el);
+      let txt = localStorage.getItem(`t_${key}`);
+      if (txt && el.innerText !== undefined && el.innerText !== txt && !['INPUT','TEXTAREA','SELECT'].includes(el.tagName))
+        el.innerText = txt;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        let ph = localStorage.getItem(`ph_${key}`);
+        if (ph && el.placeholder !== ph) el.placeholder = ph;
+        let val = localStorage.getItem(`v_${key}`);
+        if (val && el.value !== val) el.value = val;
+      }
+      if (el.tagName === 'SELECT') {
+        let opts = localStorage.getItem(`opt_${key}`);
+        if (opts) {
+          let data = JSON.parse(opts);
+          el.innerHTML = '';
+          data.forEach(o => {
+            let opt = document.createElement('option');
+            opt.value = o.v;
+            opt.textContent = o.t;
+            if (o.s) opt.selected = true;
+            el.appendChild(opt);
+          });
+        }
+      }
+      if (el.tagName === 'IMG') {
+        let src = localStorage.getItem(`img_${key}`);
+        if (src && el.src !== src) el.src = src;
+        let alt = localStorage.getItem(`alt_${key}`);
+        if (alt && el.alt !== alt) el.alt = alt;
+      }
+      if (el.tagName === 'AUDIO') {
+        let s = localStorage.getItem(`aud_${key}`);
+        if (s && el.src !== s) el.src = s;
+      }
+      if (el.tagName === 'VIDEO') {
+        let s = localStorage.getItem(`vid_${key}`);
+        if (s && el.src !== s) el.src = s;
+      }
+      let st = localStorage.getItem(`st_${key}`);
+      if (st) el.style.cssText = st;
+      else el.removeAttribute('style');
+    });
+  }
+
+  function del(el) {
+    let key = getKey(el);
+    for (let i=0; i<localStorage.length; i++) {
+      let k = localStorage.key(i);
+      if (k && k.includes(key)) localStorage.removeItem(k);
+    }
+    el.remove();
+  }
+
+  // ========== ÉDITION ==========
+  function edit(el) {
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      let v = prompt("Valeur :", el.value);
+      if (v !== null) { el.value = v; save(el); }
+      let p = prompt("Placeholder :", el.placeholder);
+      if (p !== null) { el.placeholder = p; save(el); }
+    }
+    else if (el.tagName === 'SELECT') {
+      let opts = Array.from(el.options).map(o => `${o.value}|${o.textContent}`).join(',');
+      let newOpts = prompt("Options (ex: 1|Un,2|Deux) :", opts);
+      if (newOpts) {
+        el.innerHTML = '';
+        newOpts.split(',').forEach(part => {
+          let [val, txt] = part.trim().split('|');
+          let opt = document.createElement('option');
+          opt.value = val || txt;
+          opt.textContent = txt || val;
+          el.appendChild(opt);
+        });
+        save(el);
+      }
+      let sel = prompt("Valeur sélectionnée :", el.value);
+      if (sel !== null) { el.value = sel; save(el); }
+    }
+    else if (el.tagName === 'IMG') {
+      let u = prompt("URL image :", el.src);
+      if (u && u.trim()) { el.src = u.trim(); save(el); }
+      let a = prompt("Texte alt :", el.alt);
+      if (a !== null) { el.alt = a; save(el); }
+    }
+    else if (el.tagName === 'AUDIO') {
+      let u = prompt("URL audio :", el.src);
+      if (u && u.trim()) { el.src = u.trim(); save(el); }
+    }
+    else if (el.tagName === 'VIDEO') {
+      let u = prompt("URL vidéo :", el.src);
+      if (u && u.trim()) { el.src = u.trim(); save(el); }
+    }
+    else {
+      let t = prompt("Texte :", el.innerText);
+      if (t !== null) { el.innerText = t; save(el); }
+    }
+  }
+
+  // ========== STYLE ==========
+  function applyStyle(el) {
+    let s = '';
+    if (currentStyle.fontFamily) s += `font-family: ${currentStyle.fontFamily}; `;
+    if (currentStyle.fontSize) s += `font-size: ${currentStyle.fontSize}; `;
+    if (currentStyle.color) s += `color: ${currentStyle.color}; `;
+    el.style.cssText = s;
+    save(el);
+  }
+
+  // ========== DRAG & DROP ==========
+  function enableDrag(el) {
+    if (!adminMode) return;
+    if (el.querySelector('.admin-drag-handle')) return;
+    let handle = document.createElement('div');
+    handle.className = 'admin-drag-handle';
+    handle.innerHTML = '⋮⋮';
+    handle.draggable = true;
+    handle.addEventListener('dragstart', (e) => { dragSrc = el; e.dataTransfer.setData('text/plain',''); e.dataTransfer.effectAllowed = 'move'; });
+    handle.addEventListener('dragend', () => { dragSrc = null; });
+    el.appendChild(handle);
+    el.draggable = true;
+    el.addEventListener('dragstart', (e) => { if (!adminMode) return; dragSrc = el; e.dataTransfer.setData('text/plain',''); e.dataTransfer.effectAllowed = 'move'; });
+    el.addEventListener('dragover', (e) => { if (!adminMode) return; e.preventDefault(); e.dataTransfer.dropEffect = 'move'; });
+    el.addEventListener('drop', (e) => {
+      if (!adminMode || !dragSrc || dragSrc === el) return;
+      e.preventDefault();
+      let parent = dragSrc.parentNode;
+      let next = el.nextSibling;
+      parent.insertBefore(dragSrc, next);
+      save(dragSrc);
+      dragSrc = null;
+    });
+  }
+
+  function attachEvents(el) {
+    if (!adminMode) return;
+    if (el._adm) return;
+    el._adm = true;
+    el.ondblclick = (e) => { e.stopPropagation(); edit(el); };
+    el.oncontextmenu = (e) => {
+      e.preventDefault();
+      if (adminMode && confirm("Supprimer ?")) del(el);
+    };
+    enableDrag(el);
+  }
+
+  function refreshEvents() {
+    document.querySelectorAll('body *:not(#admin-toolbar):not(#admin-add-panel):not(.admin-style-panel)').forEach(attachEvents);
+  }
+
+  // ========== MODE ADMIN ==========
+  function enableAdmin() {
+    adminMode = true;
+    document.body.classList.add('admin-mode');
+    document.getElementById('admin-btn').classList.add('active');
+    document.getElementById('admin-add-panel').style.display = 'flex';
+    refreshEvents();
+    document.body.addEventListener('click', (e) => {
+      if (!styleMode) return;
+      let t = e.target;
+      if (t.closest('#admin-toolbar, #admin-add-panel, .admin-style-panel')) return;
+      applyStyle(t);
+      alert("Style appliqué !");
+    });
+    alert("Mode Admin activé !\n- Double-clic : modifier\n- Clic droit : supprimer\n- Poignée ⋮⋮ : déplacer\n- 🎨 Style : personnaliser\n- Boutons d'ajout : insérer");
+  }
+
+  function disableAdmin() {
+    adminMode = false;
+    document.body.classList.remove('admin-mode');
+    document.getElementById('admin-btn').classList.remove('active');
+    document.getElementById('admin-add-panel').style.display = 'none';
+    document.querySelectorAll('*').forEach(el => {
+      el.ondblclick = null;
+      el.oncontextmenu = null;
+      el.draggable = false;
+      let h = el.querySelector('.admin-drag-handle');
+      if (h) h.remove();
+      delete el._adm;
+    });
+    if (styleMode) hideStylePanel();
+  }
+
+  // ========== AJOUT D'ÉLÉMENT ==========
+  function addElement(type) {
+    let msg = document.createElement('div');
+    msg.className = 'admin-msg';
+    msg.textContent = 'Cliquez sur l\'élément après lequel ajouter';
+    document.body.appendChild(msg);
+    let handler = (e) => {
+      msg.remove();
+      document.removeEventListener('click', handler, true);
+      let target = e.target;
+      if (target.closest('#admin-toolbar, #admin-add-panel, .admin-style-panel')) return;
+      while (target && target !== document.body && !target.matches('div, section, p, h1, h2, h3, h4, h5, h6, li, footer, .container')) {
+        target = target.parentNode;
+      }
+      if (!target || target === document.body) return;
+      let html = '';
+      switch(type) {
+        case 'p': html = '<p>Nouveau paragraphe</p>'; break;
+        case 'h2': html = '<h2>Nouveau titre</h2>'; break;
+        case 'img':
+          let url = prompt("URL image :", "https://via.placeholder.com/300");
+          if (!url) return;
+          html = `<img src="${url}" alt="image" style="max-width:100%">`;
+          break;
+        case 'ul': html = '<ul><li>Item 1</li><li>Item 2</li></ul>'; break;
+        case 'div': html = '<div style="border:1px solid #ccc; padding:10px;">Nouveau bloc</div>'; break;
+        case 'audio':
+          let aurl = prompt("URL audio :", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+          if (!aurl) return;
+          html = `<audio controls src="${aurl}" style="width:100%"></audio>`;
+          break;
+        case 'video':
+          let vurl = prompt("URL vidéo :", "https://www.w3schools.com/html/mov_bbb.mp4");
+          if (!vurl) return;
+          html = `<video controls src="${vurl}" style="width:100%"></video>`;
+          break;
+        default: return;
+      }
+      let temp = document.createElement('div');
+      temp.innerHTML = html;
+      let newEl = temp.firstChild;
+      target.insertAdjacentElement('afterend', newEl);
+      save(newEl);
+      attachEvents(newEl);
+    };
+    document.addEventListener('click', handler, true);
+    setTimeout(() => { if (msg) msg.remove(); document.removeEventListener('click', handler, true); }, 15000);
+  }
+
+  // ========== STYLE PANEL ==========
+  function showStylePanel() {
+    let panel = document.getElementById('admin-style-panel');
+    if (panel) panel.style.display = 'flex';
+    styleMode = true;
+    document.getElementById('admin-style-btn').classList.add('active');
+    let msg = document.createElement('div');
+    msg.className = 'admin-msg';
+    msg.textContent = 'Mode style actif : cliquez sur un texte';
+    document.body.appendChild(msg);
+    setTimeout(() => msg.remove(), 5000);
+  }
+  function hideStylePanel() {
+    let panel = document.getElementById('admin-style-panel');
+    if (panel) panel.style.display = 'none';
+    styleMode = false;
+    document.getElementById('admin-style-btn').classList.remove('active');
+  }
+
+  // ========== EXPORTATION HTML FIABLE (avec conversion des chemins relatifs) ==========
+  function exportHTML() {
+    // 1. Cloner le document
+    const cloneDoc = document.cloneNode(true);
+    
+    // 2. Supprimer tous les éléments d'administration
+    const adminToolbar = cloneDoc.getElementById('admin-toolbar');
+    if (adminToolbar) adminToolbar.remove();
+    const adminAddPanel = cloneDoc.getElementById('admin-add-panel');
+    if (adminAddPanel) adminAddPanel.remove();
+    const adminStylePanel = cloneDoc.getElementById('admin-style-panel');
+    if (adminStylePanel) adminStylePanel.remove();
+    cloneDoc.querySelectorAll('.admin-drag-handle, .admin-msg, .admin-add-message').forEach(el => el.remove());
+    
+    // 3. Nettoyer les attributs et classes admin
+    cloneDoc.querySelectorAll('[data-admin], .admin-mode').forEach(el => {
+      el.removeAttribute('data-admin');
+      el.classList.remove('admin-mode');
+    });
+    
+    // 4. Supprimer les attributs _adm
+    cloneDoc.querySelectorAll('*').forEach(el => el.removeAttribute('_adm'));
+    
+    // 5. Supprimer le script admin lui-même
+    const scripts = cloneDoc.querySelectorAll('script');
+    for (let script of scripts) {
+      if (script.textContent && (script.textContent.includes('ADMIN_PASS') || script.textContent.includes('admin-toolbar'))) {
+        script.remove();
+      }
+    }
+    
+    // 6. Convertir les chemins d'images relatifs en absolus (pour que les images fonctionnent après export)
+    //    On récupère la racine du site actuel (ex: https://monsite.com/ ou chemin local)
+    const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+    cloneDoc.querySelectorAll('img').forEach(img => {
+      let src = img.getAttribute('src');
+      if (src && !src.startsWith('http://') && !src.startsWith('https://') && !src.startsWith('data:')) {
+        // Si c'est un chemin relatif, on le transforme en absolu par rapport à la page actuelle
+        let newSrc = new URL(src, baseUrl).href;
+        img.setAttribute('src', newSrc);
+      }
+    });
+    // Même chose pour les sources audio/vidéo
+    cloneDoc.querySelectorAll('audio, video, source').forEach(media => {
+      let src = media.getAttribute('src');
+      if (src && !src.startsWith('http://') && !src.startsWith('https://') && !src.startsWith('data:')) {
+        media.setAttribute('src', new URL(src, baseUrl).href);
+      }
+    });
+    
+    // 7. Générer le fichier HTML
+    const doctype = '<!DOCTYPE html>\n';
+    const html = cloneDoc.documentElement.outerHTML;
+    const blob = new Blob([doctype + html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'page_modifiee.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    alert("✅ Export terminé !\n\nLes chemins relatifs des images ont été convertis en chemins absolus.\nPlacez le fichier exporté à la racine de votre serveur ou ajustez les chemins si nécessaire.");
+  }
+
+  // ========== CRÉATION DE L'INTERFACE ==========
+  function buildUI() {
+    let oldBar = document.getElementById('admin-toolbar');
+    if (oldBar) oldBar.remove();
+    let oldAdd = document.getElementById('admin-add-panel');
+    if (oldAdd) oldAdd.remove();
+    let oldStyle = document.getElementById('admin-style-panel');
+    if (oldStyle) oldStyle.remove();
+
+    let bar = document.createElement('div');
+    bar.id = 'admin-toolbar';
+    bar.innerHTML = `<button id="admin-btn">🔧 Admin</button><button id="admin-style-btn">🎨 Style</button><button id="admin-export">💾 Exporter HTML</button><button id="admin-reset">⟳ Reset</button>`;
+    document.body.appendChild(bar);
+
+    let addPanel = document.createElement('div');
+    addPanel.id = 'admin-add-panel';
+    addPanel.innerHTML = `<button data-add="p">📝 Paragraphe</button><button data-add="h2">📌 Titre H2</button><button data-add="img">🖼️ Image</button><button data-add="ul">📋 Liste</button><button data-add="div">🧩 Bloc</button><button data-add="audio">🎵 Audio</button><button data-add="video">🎬 Vidéo</button>`;
+    document.body.appendChild(addPanel);
+
+    let stylePanel = document.createElement('div');
+    stylePanel.id = 'admin-style-panel';
+    stylePanel.className = 'admin-style-panel';
+    stylePanel.innerHTML = `<select id="style-font"><option value="">Police défaut</option><option value="Arial">Arial</option><option value="'Times New Roman'">Times</option><option value="'Courier New'">Courier</option><option value="Georgia">Georgia</option><option value="'Comic Sans MS'">Comic Sans</option><option value="Impact">Impact</option><option value="'Open Sans'">Open Sans</option><option value="'Roboto'">Roboto</option></select><input type="number" id="style-size" placeholder="Taille px (0-2000)" min="0" max="2000" step="1"><input type="color" id="style-color" value="#000000"><button id="apply-style">Appliquer</button><button id="reset-styles">Reset styles</button>`;
+    document.body.appendChild(stylePanel);
+
+    document.getElementById('admin-btn').onclick = () => {
+      if (!adminMode) {
+        let pwd = prompt("Mot de passe :");
+        if (pwd === ADMIN_PASS) enableAdmin();
+        else alert("Mot de passe incorrect");
+      } else disableAdmin();
+    };
+    document.getElementById('admin-style-btn').onclick = () => {
+      if (!adminMode) { alert("Activez le mode admin d'abord."); return; }
+      if (styleMode) hideStylePanel();
+      else showStylePanel();
+    };
+    document.getElementById('admin-export').onclick = () => { if (adminMode) exportHTML(); else alert("Activez le mode admin."); };
+    document.getElementById('admin-reset').onclick = () => {
+      if (!adminMode) { alert("Activez le mode admin."); return; }
+      if (confirm("Réinitialiser TOUTES les modifications ?")) {
+        for (let i=0; i<localStorage.length; i++) {
+          let k = localStorage.key(i);
+          if (k && (k.startsWith('admin_') || k[0]==='t'||k[0]==='p'||k[0]==='v'||k[0]==='o'||k[0]==='i'||k[0]==='a'||k[0]==='s')) localStorage.removeItem(k);
+        }
+        location.reload();
+      }
+    };
+    document.getElementById('apply-style').onclick = () => {
+      currentStyle.fontFamily = document.getElementById('style-font').value;
+      let size = document.getElementById('style-size').value;
+      currentStyle.fontSize = size ? parseInt(size)+'px' : '';
+      currentStyle.color = document.getElementById('style-color').value;
+      alert("Style prêt. Cliquez sur un texte pour l'appliquer.");
+    };
+    document.getElementById('reset-styles').onclick = () => {
+      if (!adminMode) return;
+      if (confirm("Supprimer tous les styles ?")) {
+        document.querySelectorAll('body *').forEach(el => {
+          let key = getKey(el);
+          localStorage.removeItem(`st_${key}`);
+          el.removeAttribute('style');
+        });
+        alert("Styles réinitialisés.");
+      }
+    };
+    for (let btn of addPanel.querySelectorAll('[data-add]')) {
+      let t = btn.getAttribute('data-add');
+      btn.onclick = () => { if (adminMode) addElement(t); else alert("Activez le mode admin."); };
+    }
+  }
+
+  restore();
+  buildUI();
+})();
+</script>
+
+</body>
+</html>
